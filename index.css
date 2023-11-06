@@ -3,6 +3,17 @@ body {
   padding: 0;
 }
 
+code {
+  color: rgb(209, 255, 209);
+  background-color: rgb(82, 82, 82);
+  padding: 0.2rem;
+}
+
+blockquote {
+  background-color: rgb(250, 245, 223);
+  padding: 0.2rem 1rem;
+}
+
 #container {
   display: flex;
   width: 100vw;

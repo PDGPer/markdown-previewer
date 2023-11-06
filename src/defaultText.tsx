@@ -4,19 +4,19 @@ export const defaultText = `# Markdown Previewer
 
 [You can format all kinds of things, like this link](#)
 
-\`← Just change stuff on the editor to the left\`
+\`<span>Just change stuff on the editor to the left</span>\`
 
 \`\`\`
-Here is a code block
+<p>The above was inline code btw, this is a code block</p>
 \`\`\`
 
-- Item 1
-- Item 2
-- Item 3
+- Some list items and stuff
+- Milk
+- Eggs
 
-> A blockquote
+> A blockquote, which can contain some sort of cat noise onomatopoeia.
 
 ![Image](./image.svg)
 
-**↑ You can even add images like this one**
+**🡅 You can even add images like this one**
 `;
