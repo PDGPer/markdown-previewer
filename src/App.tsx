@@ -1,10 +1,7 @@
-import { marked } from "marked";
 import { useState } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkBreaks from "remark-breaks";
 import { defaultText } from "./defaultText";
-
-marked.use({
-  gfm: true,
-});
 
 function App() {
   const [text, setText] = useState(defaultText);
@@ -12,7 +9,12 @@ function App() {
   return (
     <div id="container">
       <textarea id="editor" value={text} onChange={(e) => setText(e.target.value)}></textarea>
-      <div id="preview" dangerouslySetInnerHTML={{ __html: marked(text) }}></div>
+
+      <div id="preview">
+        <ReactMarkdown remarkPlugins={[remarkBreaks]}>{text}</ReactMarkdown>
+      </div>
+
+      {/* <div id="preview" dangerouslySetInnerHTML={{ __html: marked(text) }}></div> */}
     </div>
   );
 }

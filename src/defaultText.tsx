@@ -4,9 +4,11 @@ export const defaultText = `# Heading 1
 
 [Link](#)
 
-\`Inline code\`  
+\`Inline code\`
 
-\`\`\`Code block\`\`\`
+\`\`\`
+Code block
+\`\`\`
 
 - List item
 
