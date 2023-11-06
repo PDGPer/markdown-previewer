@@ -1,32 +1,18 @@
-import Markdown from "markdown-to-jsx";
+import { marked } from "marked";
 import { useState } from "react";
+import { defaultText } from "./defaultText";
+
+marked.use({
+  gfm: true,
+});
 
 function App() {
-  const [text, setText] = useState(
-    `#Heading 1
-
-##Heading 2
-
-[Link](#)
-
-\`Inline code\`  
-
-\`\`\`Code block\`\`\`
-
-- List item
-
-> Blockquote
-
-![Image](./image.svg)
-
-**Bold text**
-`
-  );
+  const [text, setText] = useState(defaultText);
 
   return (
-    <div className="container">
+    <div id="container">
       <textarea id="editor" value={text} onChange={(e) => setText(e.target.value)}></textarea>
-      <Markdown id="preview">{text}</Markdown>
+      <div id="preview" dangerouslySetInnerHTML={{ __html: marked(text) }}></div>
     </div>
   );
 }
