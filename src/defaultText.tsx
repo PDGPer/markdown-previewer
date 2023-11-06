@@ -1,20 +1,22 @@
-export const defaultText = `# Heading 1
+export const defaultText = `# Markdown Previewer
 
-## Heading 2
+## An fCC frontend project
 
-[Link](#)
+[You can format all kinds of things, like this link](#)
 
-\`Inline code\`
+\`← Just change stuff on the editor to the left\`
 
 \`\`\`
-Code block
+Here is a code block
 \`\`\`
 
-- List item
+- Item 1
+- Item 2
+- Item 3
 
-> Blockquote
+> A blockquote
 
 ![Image](./image.svg)
 
-**Bold text**
+**↑ You can even add images like this one**
 `;

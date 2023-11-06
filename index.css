@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0;
 }
 
 #container {
@@ -10,10 +11,9 @@ body {
 
 #editor {
   width: 50%;
-  height: 100%;
+  height: calc(100% - 2rem);
   min-width: 200px;
-  padding: 2rem;
-  padding-top: 3.5rem;
+  padding: 2rem 2rem 0 2rem;
   border: none;
   outline: none;
   resize: none;
@@ -23,7 +23,8 @@ body {
   width: 50%;
   height: 100%;
   min-width: 200px;
-  padding: 2rem;
+  padding: 0 2rem 0 2rem;
   border-left: 1px solid lightgray;
   font-family: Arial, Helvetica, sans-serif;
+  overflow: scroll;
 }

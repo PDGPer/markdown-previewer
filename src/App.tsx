@@ -13,8 +13,6 @@ function App() {
       <div id="preview">
         <ReactMarkdown remarkPlugins={[remarkBreaks]}>{text}</ReactMarkdown>
       </div>
-
-      {/* <div id="preview" dangerouslySetInnerHTML={{ __html: marked(text) }}></div> */}
     </div>
   );
 }
