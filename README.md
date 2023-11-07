@@ -1,27 +1,15 @@
-# React + TypeScript + Vite
+# markdown-previewer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Parallel editor and markdown previewer built in React.
 
-Currently, two official plugins are available:
+## Goals
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Another quick challenge to wrap up fCC certificates while trying out some tools I haven't used that much (Vite, Tailwind and Codeium).
 
-## Expanding the ESLint configuration
+## Conclusion
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Core functionality of the app was a breeze to put together, as there are markdown parsers aplenty and they're easy to use. Tried three different ones until I found one (react-markdown with remark-breaks plugin) that seemed to fit the use case best.
 
-- Configure the top-level `parserOptions` property like this:
+Codeium has continued to show it's strengths as a tool to get simple but boring work out of the way quickly. Still keeping it away from any complexity, but it's a great search tool if you know when to disregard it.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+The biggest pain was finding out that Tailwind doesn't play well with Markdown, having to use their typography plugin to fix it and realizing it would still be a whole thing to customize Markdown CSS, so I just remade the styling with regular CSS.

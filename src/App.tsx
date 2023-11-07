@@ -8,7 +8,11 @@ function App() {
 
   return (
     <div id="container">
-      <textarea id="editor" value={text} onChange={(e) => setText(e.target.value)}></textarea>
+      <textarea
+        id="editor"
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+      ></textarea>
 
       <div id="preview">
         <ReactMarkdown remarkPlugins={[remarkBreaks]}>{text}</ReactMarkdown>
